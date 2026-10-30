@@ -1,10 +1,10 @@
 # Nama Aplikasi
 
-Nama: Baginda Parulian Siregar
-NIM: 124140135
-Kelas: RB
-Tema: Destinasi Wisata Lampung
-Deployment: https://TheLast3070.github.io/uts-paw/
+- Nama: Baginda Parulian Siregar
+- NIM: 124140135
+- Kelas: RB
+- Tema: Destinasi Wisata Lampung
+- Deployment: https://TheLast3070.github.io/uts-paw/
 
 ![Tangkapan layar beranda](docs/beranda.png)
 
