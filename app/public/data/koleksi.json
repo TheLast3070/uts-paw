@@ -1,10 +1,82 @@
 [
   {
     "id": "1",
-    "judul": "Contoh item pertama",
-    "kategori": "Contoh",
-    "fieldTema1": "ganti sesuai field tema",
-    "fieldTema2": 0,
-    "fieldTema3": "ganti sesuai field tema"
+    "judul": "Pantai Mutun",
+    "kategori": "Pantai",
+    "kabupaten": "Pesawaran",
+    "hargaTiket": 15000,
+    "jamBuka": "07.00-18.00"
+  },
+  {
+    "id": "2",
+    "judul": "Pulau Pahawang",
+    "kategori": "Pantai",
+    "kabupaten": "Pesawaran",
+    "hargaTiket": 10000,
+    "jamBuka": "06.00-18.00"
+  },
+  {
+    "id": "3",
+    "judul": "Teluk Kiluan",
+    "kategori": "Pantai",
+    "kabupaten": "Tanggamus",
+    "hargaTiket": 10000,
+    "jamBuka": "06.00-17.00"
+  },
+  {
+    "id": "4",
+    "judul": "Pantai Tanjung Setia",
+    "kategori": "Pantai",
+    "kabupaten": "Pesisir Barat",
+    "hargaTiket": 10000,
+    "jamBuka": "07.00-18.00"
+  },
+  {
+    "id": "5",
+    "judul": "Gunung Anak Krakatau",
+    "kategori": "Gunung",
+    "kabupaten": "Lampung Selatan",
+    "hargaTiket": 150000,
+    "jamBuka": "06.00-17.00"
+  },
+  {
+    "id": "6",
+    "judul": "Gunung Pesagi",
+    "kategori": "Gunung",
+    "kabupaten": "Lampung Barat",
+    "hargaTiket": 20000,
+    "jamBuka": "00.00-23.59"
+  },
+  {
+    "id": "7",
+    "judul": "Taman Nasional Way Kambas",
+    "kategori": "Alam",
+    "kabupaten": "Lampung Timur",
+    "hargaTiket": 25000,
+    "jamBuka": "08.00-16.00"
+  },
+  {
+    "id": "8",
+    "judul": "Air Terjun Way Lalaan",
+    "kategori": "Alam",
+    "kabupaten": "Tanggamus",
+    "hargaTiket": 10000,
+    "jamBuka": "08.00-17.00"
+  },
+  {
+    "id": "9",
+    "judul": "Menara Siger",
+    "kategori": "Budaya",
+    "kabupaten": "Lampung Selatan",
+    "hargaTiket": 10000,
+    "jamBuka": "08.00-17.00"
+  },
+  {
+    "id": "10",
+    "judul": "Museum Negeri Lampung Ruwa Jurai",
+    "kategori": "Budaya",
+    "kabupaten": "Bandar Lampung",
+    "hargaTiket": 5000,
+    "jamBuka": "08.00-16.00"
   }
 ]

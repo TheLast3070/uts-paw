@@ -1,5 +1,3 @@
-
-```markdown
 # Nama Aplikasi
 
 Nama: Baginda Parulian Siregar
@@ -23,4 +21,3 @@ npm run dev
 ## Konsep React yang dipakai
 
 - ...
-```
