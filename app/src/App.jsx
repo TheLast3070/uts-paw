@@ -9,14 +9,9 @@ import Statistik from './pages/Statistik.jsx'
 import Tentang from './pages/Tentang.jsx'
 import TidakDitemukan from './pages/TidakDitemukan.jsx'
 
-// Titik awal ujian. Baca soal lengkap di https://uts-paw.mhabibalgifari.web.id/soal
-// dan contoh setiap kode yang diminta di https://uts-paw.mhabibalgifari.web.id/contoh
-// Rute wajib: /, /koleksi, /koleksi/:id, /tambah, /statistik, /tentang, dan *.
-// Provider Context diletakkan di dalam komponen App ini.
-
-function Beranda() {
+export default function App() {
   return (
-     <KoleksiProvider>
+    <KoleksiProvider>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Beranda />} />
@@ -29,23 +24,5 @@ function Beranda() {
         </Route>
       </Routes>
     </KoleksiProvider>
-  )
-}
-
-function TidakDitemukan() {
-  return (
-    <main>
-      <h1>404</h1>
-      <p>Halaman tidak ditemukan.</p>
-    </main>
-  )
-}
-
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Beranda />} />
-      <Route path="*" element={<TidakDitemukan />} />
-    </Routes>
   )
 }
