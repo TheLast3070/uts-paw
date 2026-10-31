@@ -1,18 +1,48 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
 
 export default function Detail() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const { items, hapus } = useKoleksi()
-  const item = items.find((i) => i.id === id)
+  const { items, loading, hapus } = useKoleksi()
+  const item = items.find((i) => String(i.id) === id)
 
-  if (!item) return <p>Item tidak ditemukan.</p>
+  if (loading) return <p>Memuat data...</p>
+  if (!item) {
+    return (
+      <section>
+        <h1>Item tidak ditemukan</h1>
+        <Link to="/koleksi">Kembali ke koleksi</Link>
+      </section>
+    )
+  }
+
+  const konfirmasiHapus = () => {
+    if (window.confirm(`Hapus "${item.judul}"?`)) {
+      hapus(item.id)
+      navigate('/koleksi')
+    }
+  }
 
   return (
-    <>
+    <section>
       <h1>{item.judul}</h1>
-      <button onClick={() => { hapus(item.id); navigate('/koleksi') }}>Hapus</button>
-    </>
+      <dl>
+        <dt>Kategori</dt>
+        <dd>{item.kategori}</dd>
+        <dt>Kabupaten</dt>
+        <dd>{item.kabupaten}</dd>
+        <dt>harga Tiket (Rp)</dt>
+        <dd>{item.hargaTiket}</dd>
+        <dt>jam Buka</dt>
+        <dd>{item.jamBuka}</dd>
+      </dl>
+      <div className="aksi">
+        <button type="button" onClick={konfirmasiHapus}>
+          Hapus
+        </button>
+        <Link to="/koleksi">Kembali</Link>
+      </div>
+    </section>
   )
 }
