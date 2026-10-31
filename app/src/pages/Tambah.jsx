@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
 import './Tambah.css'
 
-const AWAL = { judul: '', kategori: 'Pantai', kabupaten: '', hargaTiket: '', jamBuka: '' }
+const AWAL = { judul: '', kategori: 'Pantai', kabupaten: '', hargaTiket: '10.000', jamBuka: '08.00-16.00' }
 
 export default function Tambah() {
   const { tambah } = useKoleksi()
