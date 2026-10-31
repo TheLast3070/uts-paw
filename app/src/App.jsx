@@ -8,7 +8,6 @@ import Tambah from './pages/Tambah.jsx'
 import Statistik from './pages/Statistik.jsx'
 import Tentang from './pages/Tentang.jsx'
 import TidakDitemukan from './pages/TidakDitemukan.jsx'
-import mahasiswa from '../mahasiswa.json'
 
 // Titik awal ujian. Baca soal lengkap di https://uts-paw.mhabibalgifari.web.id/soal
 // dan contoh setiap kode yang diminta di https://uts-paw.mhabibalgifari.web.id/contoh
