@@ -1,6 +1,6 @@
 /* latar halaman, hanya aktif di Beranda */
 body:has(.beranda) {
-  background: url('./sampul.jpg') center / cover no-repeat;
+  background: url('./sampulringan.jpg') center / cover no-repeat;
 }
 
 .beranda {
