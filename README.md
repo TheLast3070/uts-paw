@@ -13,6 +13,9 @@
 - Dapat mendaftarkan Wisata Lampung yang baru
 - Dapat melihat Daftar Wisata Lampung mulai dari nama wisata, kategori, lokasi kabupaten, harga tiket masuk dan jam bukanya
 - Dapat melihat statistik berapa banyak data Wisata Lampung yang terdaftar pada web
+- Dapat menghapus Data Wisata Lampung yang ada
+- Bisa mencari Wisata Lampung berdasarkan nama wisatanya
+- Bisa mencari wisata lampung berdasarkan Kategorinya
 
 ## Menjalankan secara lokal
 
