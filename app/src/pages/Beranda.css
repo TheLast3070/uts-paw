@@ -1,0 +1,62 @@
+/* latar halaman, hanya aktif di Beranda */
+body:has(.beranda) {
+  background: url('./sampul.jpg') center / cover no-repeat;
+}
+
+.beranda {
+  overflow: hidden;
+  border: 1px solid var(--biru3);
+  border-radius: 12px;
+}
+
+.beranda-sampul {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 2rem 3rem;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.beranda-sampul h1 {
+  max-width: 20ch;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  font-size: clamp(2rem, 4rem, 4rem);
+  color: var(--biru5);
+}
+
+.beranda-pengantar {
+  max-width: 60ch;
+  margin-inline: auto;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--biru5);
+}
+
+.beranda-ringkasan {
+  max-width: 50ch;
+  margin-inline: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--biru5);
+}
+
+.beranda-tombol {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3px;
+  background: var(--biru4);
+  color: var(--biru1);
+  font-weight: 600;
+  transition: background 0.4s;
+}
+
+.beranda-tombol:hover {
+  background: var(--biru5);
+  color: var(--biru1);
+}
+
+@media (max-width: 768px) {
+  .beranda-sampul { padding: 2.5rem 1.25rem 2rem; }
+  .beranda-sampul::before { width: 160px; height: 160px; top: -60px; right: -50px; }
+}
