@@ -2,7 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 import './Layout.css'
 
 const MENU = [
-  { ke: '/', label: 'beranda' },
+  { ke: '/', label: 'Beranda' },
   { ke: '/koleksi', label: 'Koleksi' },
   { ke: '/tambah', label: 'Tambah' },
   { ke: '/statistik', label: 'Statistik' },

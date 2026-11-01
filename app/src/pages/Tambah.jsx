@@ -15,14 +15,14 @@ export default function Tambah() {
 
   const simpan = (e) => {
     e.preventDefault()
-    if (!form.judul.trim()) {
-      setGalat('Judul wajib diisi.')
+    if (form.judul.trim().length < 3) {
+      setGalat('Judul wajib diisi dan minimal 3 karakter')
       return
     }
     setGalat('')
     tambah({ ...form, judul: form.judul.trim() })
     navigate('/koleksi')
-  } 
+  }
 
   return (
     <form className="formulir" onSubmit={simpan} noValidate>
