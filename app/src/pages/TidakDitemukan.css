@@ -1,0 +1,43 @@
+body:has(.tidakditemukan) {
+  background: url('./error.jpg') center / cover no-repeat;
+}
+
+.sampul {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 2rem 3rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.sampul h1 {
+  max-width: 20ch;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  font-size: clamp(2rem, 6rem, 10rem);
+  color: var(--biru5);
+}
+
+.sampul p {
+  max-width: 60ch;
+  margin-inline: auto;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--biru5);
+}
+
+.tombol {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3px;
+  background: var(--biru4);
+  color: var(--biru1);
+  font-weight: 600;
+  transition: background 0.4s;
+}
+
+.tombol:hover {
+  color: var(--biru1);
+  background-color: var(--biru5);
+}

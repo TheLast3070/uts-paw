@@ -26,6 +26,10 @@
   font-size: 0.9rem;
 }
 
+.formulir h1{
+  margin-inline: auto;
+}
+
 .formulir button {
   align-self: flex-start;
   margin-top: 1rem;

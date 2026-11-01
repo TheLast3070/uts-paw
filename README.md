@@ -6,7 +6,7 @@
 - Tema: Destinasi Wisata Lampung
 - Deployment: https://TheLast3070.github.io/uts-paw/
 
-![Tangkapan layar beranda](docs/beranda.png)
+![Tangkapan layar beranda](./app/src/pages/FotoBeranda.png)
 
 ## Fitur
 
@@ -14,9 +14,9 @@
 
 ## Menjalankan secara lokal
 
-cd app
-npm install
-npm run dev
+- cd app
+- npm install
+- npm run dev
 
 ## Konsep React yang dipakai
 
