@@ -25,4 +25,10 @@
 
 ## Konsep React yang dipakai
 
-- ...
+- Komponen fungsi, props, dan children ( KartuItem, KotakPencarian, Rupiah, TombolKembali)
+- useState dan useEffect (form, pencarian, filter kategori, memuat data, localStorage)
+- Context API seperti createContext, Provider, dan useContext (KoleksiProvider dan useKoleksi)
+- hook (useKoleksi dan useLocalStorage)
+- fetch dengan async/await serta state loading dan error
+- Controlled form dengan validasi, ada di halaman tambah
+- Rendering daftar dengan map dan key, serta conditional rendering
