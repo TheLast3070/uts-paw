@@ -1,0 +1,39 @@
+.detail h1 { 
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.isi .detail-tabel {
+  display: grid;
+  grid-template-columns: minmax(110px, 200px) 1fr;
+  max-width: 500px;
+  margin-inline: auto;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--biru3);
+  background: var(--biru1);
+  color: var(--biru5);
+  text-align: center;
+
+    dt, dd {
+        margin: 0;
+        padding: 1rem;
+        border-bottom:1px solid var(--biru3);
+    }
+    dt {
+        background: var(--biru2);
+        font-weight: 600;
+    }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    dt { border-bottom: 0; padding-bottom: 0.3rem; }
+  }
+}
+
+.aksi {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}

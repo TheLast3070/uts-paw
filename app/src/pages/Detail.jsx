@@ -1,5 +1,8 @@
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
+import TombolKembali from '../components/TombolKembali.jsx'
+import Rupiah from '../components/Rupiah.jsx'
+import './Detail.css'
 
 export default function Detail() {
   const { id } = useParams()
@@ -25,23 +28,23 @@ export default function Detail() {
   }
 
   return (
-    <section>
+    <section className="detail">
       <h1>{item.judul}</h1>
-      <dl>
+      <dl className="detail-tabel">
         <dt>Kategori</dt>
         <dd>{item.kategori}</dd>
         <dt>Kabupaten</dt>
         <dd>{item.kabupaten}</dd>
-        <dt>harga Tiket (Rp)</dt>
-        <dd>{item.hargaTiket}</dd>
-        <dt>jam Buka</dt>
+        <dt>Harga Tiket</dt>
+        <dd><Rupiah nilai={item.hargaTiket} ribuan={true} /></dd>
+        <dt>Jam Buka</dt>
         <dd>{item.jamBuka}</dd>
       </dl>
       <div className="aksi">
         <button type="button" onClick={konfirmasiHapus}>
           Hapus
         </button>
-        <Link to="/koleksi">Kembali</Link>
+        <TombolKembali />
       </div>
     </section>
   )
