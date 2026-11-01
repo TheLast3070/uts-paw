@@ -6,18 +6,61 @@
 
 .kepala {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  background: var(--biru4);
+  color: var(--biru1);
+}
+
+.kepala strong {
+  font-family: var(--font-judul);
+  font-size: 1.15rem;
+}
+
+.kepala::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--biru3);
 }
 
 .menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-.menu a.active {
-  font-weight: 600;
+.menu a {
+  position: relative;
+  color: var(--biru1);
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+}
+.menu a:hover {
+  color: var(--biru2);
+}
+
+.menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--biru2);
+  transform: scaleX(0);
+  transition: transform 0.7s;
+}
+
+.menu a:hover::before, .menu a.active::before {
+  transform: scaleX(1);
 }
 
 .isi {
@@ -25,14 +68,17 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 4rem 1.5rem;
+  text-align: center;
 }
 
 .kaki {
   padding: 1rem 1.5rem;
-  border-top: 1px solid #dcdcdc;
-  color: #57606a;
-  font-size: 0.9rem;
+  border-top: 10px solid var(--biru3);
+  background: var(--biru4);
+  color: var(--biru1);
+  font-size: 1rem;
+  text-align: center;
 }
 
 .aksi {
@@ -49,7 +95,8 @@
 }
 
 .isi dt {
-  font-weight: 600;
+  font-weight: bold;
+  color: var(--biru4);
 }
 
 .isi dd {
@@ -58,38 +105,51 @@
 
 .daftar-kartu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.5rem;
 }
 
 .kartu {
-  padding: 1rem;
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  background: var(--biru1);
+  border: 2px solid var(--biru3);
+  border-left: 5px solid var(--biru4);
+  border-right: 5px solid var(--biru4);
+  border-radius: 5px;
+  transition: background 0.4s, border-color 0.4s;
+}
+
+.kartu:hover {
+  background: var(--biru2);
+  border-left-color: var(--biru5);
 }
 
 .kartu h3 {
   margin: 0 0 0.25rem;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 .kartu p {
   margin: 0;
-  color: #57606a;
+  color: var(--biru4);
 }
 
 .alat-koleksi {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .alat-koleksi input,
 .alat-koleksi select {
   padding: 0.5rem 0.75rem;
-  border: 1px solid #c4c4c4;
-  border-radius: 6px;
+  border: 1px solid var(--biru3);
+  border-radius: 4px;
+  background: var(--biru1);
+  color: var(--biru4);
   font: inherit;
 }
 
@@ -97,9 +157,5 @@
   .kepala {
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .daftar-kartu {
-    grid-template-columns: 1fr;
   }
 }

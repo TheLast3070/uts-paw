@@ -1,16 +1,58 @@
 :root {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --biru1: #F2EFE7;
+  --biru2: #C8DFDB;
+  --biru3: #66A3BF;
+  --biru4: #3368A0;
+  --biru5: #1A4D7A;
+  --font-judul: "Montserrat", system-ui, sans-serif;
+  --font-isi: "Open Sans", system-ui, sans-serif;
+  
+  font-family: var(--font-isi);
   line-height: 1.5;
-  color: #1f2328;
-  background: #f6f7f9;
+  color: var(--biru4);
+  background: var(--biru1);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-judul);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+a {
+  color: var(--biru4);
+  text-decoration: dashed;
+  transition: color 0.15s, background 0.15s;
+}
+a:hover {
+  color: var(--biru5);
+  text-decoration:solid ;
+}
+
+button {
+  padding: 0.55rem 1.1rem;
+  border: 0;
+  border-radius: 4px;
+  background: var(--biru4);
+  color: var(--biru1);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover {
+  background: var(--biru5);
+  color: var(--biru1);
 }
