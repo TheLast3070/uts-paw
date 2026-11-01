@@ -1,0 +1,45 @@
+.h1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.tentang {
+  padding: 1rem;
+  text-align: center;
+  gap: 0;
+}
+
+.tentanglist {
+    text-align: left;
+    gap: 0;
+    max-width: 500px;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    background: var(--biru1);
+    border: 1px solid var(--biru3);
+    border-radius: 6px;
+    margin-inline: auto;
+}
+
+.tentanglist dt {
+  font-weight: 600;
+  gap : 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--biru3);
+  background: var(--biru2);
+}
+
+.tentanglist dd {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  gap : 0;
+  border-bottom: 1px solid var(--biru3);
+  text-align: center;
+}
+
+.repo {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
