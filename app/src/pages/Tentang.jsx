@@ -7,7 +7,7 @@ export default function Tentang() {
   const { nama, nim, kelas, tema } = mahasiswa
   return (
     <section>
-      <h1>Tentang</h1>
+      <h1>About</h1>
       <dl>
         <dt>Nama</dt>
         <dd>{nama}</dd>

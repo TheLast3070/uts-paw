@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import useKoleksi from '../hooks/useKoleksi.js'
 import './Tambah.css'
 
-const AWAL = { judul: '', kategori: 'Pantai', kabupaten: '', hargaTiket: '10.000', jamBuka: '08.00-16.00' }
+const AWAL = { judul: '', kategori: 'Pantai', kabupaten: 'Lampung Barat', hargaTiket: '0', jamBuka: '08.00-17.00' }
 
 export default function Tambah() {
   const { tambah } = useKoleksi()
@@ -15,23 +15,23 @@ export default function Tambah() {
 
   const simpan = (e) => {
     e.preventDefault()
-    if (form.judul.trim().length < 3) {
-      setGalat('Judul wajib diisi, minimal 3 karakter.')
+    if (!form.judul.trim()) {
+      setGalat('Judul wajib diisi.')
       return
     }
+    setGalat('')
     tambah({ ...form, judul: form.judul.trim() })
     navigate('/koleksi')
-  }
+  } 
 
   return (
     <form className="formulir" onSubmit={simpan} noValidate>
-      <h1>Tambah Tugas</h1>
+      <h1>Tambah Tempat Wisata</h1>
 
-      <label htmlFor="judul">Judul</label>
+      <label htmlFor="judul">judul / nama Wisata</label>
       <input id="judul" name="judul" value={form.judul} onChange={ubah} />
-      {galat && <p role="alert">{galat}</p>}
 
-      <label htmlFor="kategori">Kategori</label>
+      <label htmlFor="kategori">Kategori Wisata</label>
       <select id="kategori" name="kategori" value={form.kategori} onChange={ubah}>
         <option>Pantai</option>
         <option>Gunung</option>
@@ -40,15 +40,31 @@ export default function Tambah() {
         <option>Hutan</option>
       </select>
 
-      <label htmlFor="kabupaten">Kabupaten</label>
-      <input id="kabupaten" name="kabupaten" value={form.kabupaten} onChange={ubah} />
+      <label htmlFor="kabupaten">Kabupaten Tempat Wisata</label>
+      <select id="kabupaten" name="kabupaten" value={form.kabupaten} onChange={ubah}>
+        <option>Lampung Barat</option>
+        <option>Lampung Selatan</option>
+        <option>Lampung Tengah</option>
+        <option>Lampung Timur</option>
+        <option>Lampung Utara</option>
+        <option>Mesuji</option>
+        <option>Pesawaran</option>
+        <option>Pesisir Barat</option>
+        <option>Pringsewu</option>
+        <option>Tanggamus</option>
+        <option>Tulang Bawang</option>
+        <option>Tulang Bawang Barat</option>
+        <option>Way Kanan</option>
+      </select>
 
-      <label htmlFor="HargaTiket">Harga Tiket (Rp)</label>
-      <input id="hargaTiket" name="hargaTiket" type="number" value={form.hargaTiket} onChange={ubah} />
+      <label htmlFor="hargaTiket">Harga Tiket (Rp)</label>
+      <input id="hargaTiket" name="hargaTiket" type="number" min="0" value={form.hargaTiket} onChange={ubah} placeholder="10000" />
 
       <label htmlFor="jamBuka">Jam Buka</label>
-      <input id="jamBuka" name="jamBuka" value={form.jamBuka} onChange={ubah} />
+      <input id="jamBuka" name="jamBuka" value={form.jamBuka} onChange={ubah} placeholder="08:00 - 17:00" />
 
+
+      {galat && <p role="alert">{galat}</p>}
       <button type="submit">Simpan</button>
     </form>
   )
