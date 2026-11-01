@@ -4,33 +4,36 @@
 
 .tabel-data {
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
   border-collapse: collapse;
+  margin-top: 3rem;
+  margin-inline: auto;
+  border: 1px solid var(--biru3);
 }
 
 .tabel-data th,
 .tabel-data td {
   padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid #dcdcdc;
-  text-align: left;
+  border-bottom: 1px solid var(--biru3);
+  text-align: center;
 }
 
 .tabel-data thead th {
-  background: #f1f1f1;
+  background: var(--biru2);
 }
 
 .tabel-data tbody tr:nth-child(even) {
-  background: #fafafa;
+  background: var(--biru1);
 }
 
 .tabel-data td:last-child,
 .tabel-data th:last-child {
-  text-align: right;
+  text-align: center;
 }
 
 .tabel-data tfoot th,
 .tabel-data tfoot td {
-  border-top: 2px solid #1f2328;
+  border-top: 2px solid var(--biru3);
   font-weight: 600;
 }
 

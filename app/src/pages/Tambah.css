@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 0.5rem;
   max-width: 480px;
+  margin-inline: auto;
+  text-align: left;
 }
 
 .formulir label {
@@ -30,10 +32,16 @@
   padding: 0.6rem 1.5rem;
   border: 0;
   border-radius: 6px;
-  background: #1f2328;
-  color: #fff;
+  background: var(--biru4);
+  color: var(--biru1);
   font: inherit;
   cursor: pointer;
+  transition: background 0.4s, color 0.4s;
+  margin-inline: auto;
+}
+.formulir button:hover {
+  background: var(--biru5);
+  color: var(--biru1);
 }
 
 @media (max-width: 480px) {
