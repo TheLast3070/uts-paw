@@ -10,12 +10,9 @@
 
 ## Fitur
 
-- useLocalStorage(kunci, nilaiAwal) : web bisa menyimpan state ke localStorage terus bisa dilihat lagi ketika halaman dimuat, sehingga data tidak hilang setelah refresh
-- useKoleksi() : ambil data dan fungsi dari bagian Context, sehingga cukup 1x panggil hook
-- KoleksiProvider : untuk membungkus aplikasi dan membagikan items, loading, error, tambah, dan hapus ke semua halaman
-- muat() : gunanya untuk ambil data awal dari koleksi.json dengan fetch(async) terus disimpan datanya
-- tambah(item) : menambah destinasi baru ke daftar
-- hapus(id) : menghapus destinasi berdasarkan id
+- Dapat mendaftarkan Wisata Lampung yang baru
+- Dapat melihat Daftar Wisata Lampung mulai dari nama wisata, kategori, lokasi kabupaten, harga tiket masuk dan jam bukanya
+- Dapat melihat statistik berapa banyak data Wisata Lampung yang terdaftar pada web
 
 ## Menjalankan secara lokal
 
